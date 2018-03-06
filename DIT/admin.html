@@ -74,6 +74,7 @@ ul { width: 100%;
 		text-align: center;
 		}
 form.inputform,input { color: black; 
+				border-radius: 3px;
 				font-weight: bold;}
 
 footer { 
@@ -86,11 +87,24 @@ header { background: linear-gradient(red, maroon);
 		width: 100%; height: 25px; 
 		font-size: 1.2em;
 		font-weight: bold; }
+header.blogbody { background: linear-gradient(rgb(42,101,247), #2a2727);
+		margin: 0;
+		border-radius: 8px;
+		width: 100%; height: 30px; 
+		font-size: 1.2em;
+		font-weight: bold; }
+form.sort_by{float: right;
+			font-size: 0.9em;
+			 }
+input.bloginp, select.bloginp { color: black;
+		height: 70%;
+		border-radius: 3px;
+		font-weight: bold;}
 table { cellpadding: 2px;
 		cellspacing: 2px;
 		color: black; 
 		font-weight: bold;
-		font-size: 0.9em}
+		font-size: 0.9em; }
 canvas
 	{
 	width: 60%;
@@ -104,7 +118,6 @@ canvas
 
 <div id="navig">
 <ul>
-<li><a href=" "><i class="fa fa-gear" style="color: white;"></i></a></li>
 <li><a href=""><i class="fa fa-question-circle-o" style="color: white;"></i></a></li>
 <li><a href=""><i class="fa fa-id-badge" style="color: white;"></i>&nbsp;Profile</a></li>
 </ul>
@@ -154,21 +167,59 @@ canvas
 <br>
 <input type="submit" value="Remove" name="Remove" />
 <br><hr>
+
+<p style="color: black;"><em><strong>Remove an Article</strong></em></p><br>
+<table>
+<tr><td>Article ID: </td><td><input type="number" name="article_id" value=" " /><td></tr>
+</table>
+<br>
+<input type="submit" value="Remove" name="Remove" />
+<br><hr>
+
+<p style="color: black;"><em><strong>Remove Notes</strong></em></p><br>
+<table>
+<tr><td>Notes ID: </td><td><input type="number" name="notes_id" value=" " /><td></tr>
+</table>
+<br>
+<input type="submit" value="Remove" name="Remove" />
+<br>
+
 <br><br>
 </form>
 </center>
 </div>
 
 <div class="col2">
-<ul>
-<li>
-   
-</li>
-<li><a href=" ">Section</a></li>
-<li><a href="">Branch</a></li>
-<li><a href="">Year</a></li>
-
-</ul>
+<header class="blogbody">
+<form class="sort_by" action=" " method="post" name="body_form">
+Sort By: <select class="bloginp" name="year">
+  <option value="year">year</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+<select class="bloginp" name="branch">
+  <option value="branch">branch</option>
+  <option value="CS">CS</option>
+  <option value="CS-BDA">CS-BDA</option>
+  <option value="CS-CCV">CS-CCV</option>
+  <option value="MEC">MEC</option>
+  <option value="CIVIL">CIVIL</option>
+</select>
+<select class="bloginp" name="section">
+  <option value="section">section</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+  <option value="H">H</option>
+</select>
+<input type="submit" class="bloginp" value="Go" name="submit_sort" /></form>
+</header><br>
 <h2>body here</h2><br><p>every post comes in<br>a seperate division element<br>in white background<br>from backend<br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
