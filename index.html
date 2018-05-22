@@ -10,6 +10,37 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links in navbar + footer link
+		  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		   // Make sure this.hash has a value before overriding default behavior
+		  if (this.hash !== "") {
+
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+			  scrollTop: $(hash).offset().top
+			}, 900, function(){
+
+			  // Add hash (#) to URL when done scrolling (default click behavior)
+			  window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		})
+</script>
+  
+  
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -66,6 +97,12 @@
 		background-color: #2f2f2f;
       color: #fff;
 	  }
+   .bg-8 {
+		background-color: #fff;
+	  }
+	.bg-9 {
+			background-color: hsla(89, 43%, 51%, 0.3);
+	}
   .p1 {
 		color: 	#000;
 		font-family: "Comic Sans MS", cursive, sans-serif;
@@ -75,7 +112,6 @@
       padding-bottom: 70px;
   }
   li { color: black; }
-
   </style>
 </head>
 <body>
@@ -98,6 +134,7 @@
 		<li><a href="#about">ABOUT</a></li>
         <li><a href="#theme">THEME</a></li>
         <li><a href="#speakers">SPEAKERS</a></li>
+		<li><a href="#registration">REGISTRATION</a></li>
         <li><a href="#schedule">SCHEDULE</a></li>
       </ul>
     </div>
@@ -177,7 +214,7 @@ DIT University</p>
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
+<div id="committee" class="container-fluid bg-3 text-center">    
   <h3 class="margin" style="color: #123; font-size: 1.5em;">ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
   <div class="row">
     <div class="col-sm-4">
@@ -240,7 +277,7 @@ DIT University</p>
 
 <!-- Fourth container -->
 
-<div class="container-fluid bg-5">    
+<div id="about" class="container-fluid bg-5">    
   <h3 class="margin text-center" style="color: #123; font-size: 1.5em; font-family: 'Arial Black', Gadget, sans-seri;">ABOUT</h3>
   <div class="row">
     <div class="col-sm-6">
@@ -337,7 +374,7 @@ DIT University</p>
  </div>
  
  <!-- Fifth Container -->
-<div class="container-fluid bg-7 text-center">
+<div id="theme" class="container-fluid bg-7 text-center">
   <h3 class="margin">THEME OF THE CONFERENCE</h3>
   <div class="jumbotron">
 	<ul>
@@ -356,7 +393,205 @@ DIT University</p>
 	</ul>
 	</div>
 </div>
+<!-- sixth Container -->
+<div id="speakers" class="container-fluid bg-7 text-center">
+	<h3 class="margin gb">INVITED SPEAKERS</h3>
+	<div class="jumbotron">
+	<p class="p1">	Dr. Rajendra Dhobal, Director General, UCOST, Dehradun<br>
+		Dr. Savita, Vice Chancellor, FRI University Dehradun<br>
+		Dr. V.K. Jain, JNU, New Delhi<br>
+		Dr. Dinesh Mohan, JNU, New Delhi<br>
+		Dr. B.R. Gurjar, IIT Roorkee<br>
+		Dr. Shailey Singhal, UPES, Dehradun<br>
+		Dr. Uma Malkania, GB Pant University, Pantnagar<br>
+		Dr. S.N. Singh, NPL, New Delhi<br>
+		Dr. T.K. Mandal, NPL, New Delhi<br>
+		Dr. C Sharma, NPL, New Delhi</p>
+	</div>
+</div>
 
+<!-- seventh Container -->
+<div id="registration" class="container-fluid bg-8" style="color:black;">
+	<h3 class="margin text-center">REGISTRATION FEE</h3>
+	<p><i>Registration fee includes Conference Kit, Refreshment, Lunch, Dinner, etc.</i></p>
+	<div class="row">
+		<div class="col-sm-8">
+			<table class="table table-striped">
+				<thead>
+				  <tr>
+					<th>Category</th>
+					<th></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Student/Research Scholar</td>
+					<td>INR 1500/-</td>
+				  </tr>
+				  <tr>
+					<td>Faculty/Industry</td>
+					<td>INR 2500/-</td>
+				  </tr>
+				  <tr>
+					<td>International Deligate</td>
+					<td>INR 4000/-</td>
+				  </tr>
+				</tbody>
+			  </table>
+		</div>
+	</div><br>
+	<h3 class="margin text-center"><u>MODE OF PAYMENT</u></h3>
+</div>
+
+<!-- seighth Container -->
+<div id="schedule" class="container-fluid bg-9" style="color: #123;">
+	<h2 class="margin text-center">PROGRAM SCHEDULE</h2>
+	<h4 class="margin text-center"><strong>September 28, 2018 (Friday)</strong></h4>
+	<div class="row">
+		<div class="col-sm-10">
+			<table class="table table-condensed">
+				<thead>
+				  <tr>
+					<th>S.No.</th>
+					<th>Event</th>
+					<th>Timing</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>01</td>
+					<td>Spot Registration</td>
+					<td>08:30 - 10:00 AM</td>
+				  </tr>
+				  <tr>
+					<td>02</td>
+					<td>Inaugural Function</td>
+					<td>10:00 - 11:00 AM</td>
+				  </tr>
+				  <tr>
+					<td>03</td>
+					<td>Key Note Address</td>
+					<td>11:00 - 11:30 AM</td>
+				  </tr>
+				  <tr>
+					<td>04</td>
+					<td>Hi Tea</td>
+					<td>11:30 - 12:00 PM</td>
+				  </tr>
+				  <tr>
+					<td>05</td>
+					<td>Technical Session-I</td>
+					<td>12:00 - 01:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>06</td>
+					<td>Lunch</td>
+					<td>01:30 - 02:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>07</td>
+					<td>Technical Session-II</td>
+					<td>02:30 - 04:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>08</td>
+					<td>Poster Presentation on NANOART</td>
+					<td>04:30 - 05:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>09</td>
+					<td>Cultural Programme</td>
+					<td>05:30 - 07:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>10</td>
+					<td>Conference Dinner</td>
+					<td>08:00 - 10:00 PM</td>
+				  </tr>
+				</tbody>
+			  </table>
+		</div>
+	</div><br>
+	<h4 class="margin text-center"><strong>September 29, 2018 (Saturday)</strong></h4>
+	<div class="row">
+		<div class="col-sm-10">
+			<table class="table table-condensed">
+				<thead>
+				  <tr>
+					<th>S.No.</th>
+					<th>Event</th>
+					<th>Timing</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>01</td>
+					<td>Technical Session-III</td>
+					<td>09:00 - 10:30 AM</td>
+				  </tr>
+				  <tr>
+					<td>02</td>
+					<td>Tea</td>
+					<td>10:30 - 11:00 AM</td>
+				  </tr>
+				  <tr>
+					<td>03</td>
+					<td>Technical Session-IV</td>
+					<td>11:00 - 12:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>04</td>
+					<td>Lunch</td>
+					<td>12:30 - 01:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>05</td>
+					<td>Technical Session-V</td>
+					<td>01:30 - 03:00 PM</td>
+				  </tr>
+				  <tr>
+					<td>06</td>
+					<td>Valedictory Function and Prize Distribution</td>
+					<td>03:00 - 04:30 PM</td>
+				  </tr>
+				  <tr>
+					<td>07</td>
+					<td>Tea</td>
+					<td>04:30 - 05:00 PM</td>
+				  </tr>
+				</tbody>
+			  </table>
+		</div>
+	</div><br>
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h3 class="margin text-center"><u>CALL FOR RESEARCH PAPERS AND POSTERS</u></h3>
+			<p>Original Research paper can be submitted in the form of oral or poster presentation. It is the responsibility of the author to confirm that 
+			the work has not been presented earlier in the same form or as major component of the presentation ai any other such conference. Presenter will 
+			be given 7 minutes to present their research work and 3 minutes for discussion if selected for an oral presentation. Selected papers will be published 
+			in the conference proceedings/gournal. </p>
+		</div>
+		<div class="col-sm-2">
+		</div>
+	</div>	
+	<br>
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h3 class="margin text-center"><u>SUBMISSION OF PAPERS</u></h3>
+			<p>Participants should submit the abstract not exceeding 200 words (Min. 150 words) on a seperate sheet by 30th August 2018. The paper received 
+				after the due date will not br considered. The abstract should be typed on Times New Roman, 12 Pt, line spacing 1. The title of the paper 
+				should be bold, in capital letters and with a font size of 14 followed by the name of author(s) font size 12 along with their affiliation 
+				(italic, font size 12) and the presenting author should be underlined.</p>
+		</div>
+		<div class="col-sm-2">
+		</div>
+	</div>	
+</div>
+	
 <!-- Footer -->
 <footer class="bg-4 text-center">
   <p>&copy; All rights reserved.</p> 
