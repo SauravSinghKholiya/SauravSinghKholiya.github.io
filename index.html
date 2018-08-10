@@ -37,9 +37,28 @@
 			  });
 			} // End if
 		  });
-		})
+		  
+		  $(document).ready(function () {
+  $(".navbar li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
+		  
+		  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+		
+		
 </script>
-  
+ 
   
   <style>
   body {
@@ -112,7 +131,51 @@
       padding-bottom: 70px;
   }
   li { color: black; }
-  </style>
+ 
+ .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -145,19 +208,75 @@
 <div class="container-fluid bg-1 text-center">
 	<div class="row">
 		<img src="logo24.png" style="width: 15%; margin-left:3%; float: left;" alt=" "></img>
-		<img src="logo.png" style="width: 15%; align:center;" alt=" "></img>
+		<!-- <img src="logo.png" style="width: 15%; align:center;" alt=" "></img> -->
 		<img src="logo_1.png" style="width: 15%; margin-right: 3%; float: right;" alt=" "></img>
 	</div>
 	
-	<h3 class="margin" style="font-family: 'Lucida Console', Monaco, monospace; font-weight: bold; font-size: 1.5em; color: black;">DST-SERB SPONSERED<BR>INTERNATIONAL CONFERENCE<BR> ON <BR>
-			ENVIRONMENTAL NANOTECHNOLOGY FOR
-			SOCIO ECONOMIC<BR>DEVELOPMENT OF INDIA<BR>
-			(ENTESTED 2018)
-			<BR>DATE: 28<sup>th</sup> & 29<sup>th</sup> SEPTEMBER,2018</h3>
+	<h3 class="margin" style="font-family: 'Lucida Console', Monaco, monospace;
+			text-shadow: 1px 1px 1px #32cd32; font-weight: bold; font-size: 1.5em; color: #123;">INTERNATIONAL CONFERENCE<BR> ON <BR>
+			ENVIRONMENTAL NANOTECHNOLOGY FOR<BR>
+			SOCIO ECONOMIC DEVELOPMENT OF INDIA<BR>
+			(ENTESTED 2018)<br></h3><h4 class="margin" style="font-family: 'Lucida Console', Monaco, monospace;
+			text-shadow: 1px 1px 1px #32cd32; font-weight: bold; font-size: 1.2em; color: #123;">DATE:
+			<br>28<sup>th</sup> & 29<sup>th</sup> SEPTEMBER,2018</h4>
 			
-			<center><div style="width: 90%;"><img class="img-responsive" src="11.png" alt=" " style="width: 70%;" ></img></div></center>
-		<h3 class="margin" style="color: black;">ORGANISED BY</h3>
-			<p style="color: black; font-weight: bold;">DEPARTMENT OF CHEMISTRY<br>
+			<!-- Carouser -->
+			<div class="row">
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-8">
+					  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+						  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						  <li data-target="#myCarousel" data-slide-to="1"></li>
+						  <li data-target="#myCarousel" data-slide-to="2"></li>
+						  <li data-target="#myCarousel" data-slide-to="3"></li>
+						  <li data-target="#myCarousel" data-slide-to="4"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+						  <div class="item active">
+							<img src="DIT1.jpg" alt="DITU" style="width:100%;">
+						  </div>
+
+						  <div class="item">
+							<img src="DIT2.jpg" alt="DITU" style="width:100%;">
+						  </div>
+						
+						  <div class="item">
+							<img src="DIT3.jpg" alt="DITU" style="width:100%;">
+						  </div>
+						  
+						  <div class="item">
+							<img src="DIT4.jpg" alt="DITU" style="width:100%;">
+						  </div>
+						  
+						  <div class="item">
+							<img src="DIT5.jpg" alt="DITU" style="width:100%;">
+						  </div>
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						  <span class="glyphicon glyphicon-chevron-left"></span>
+						  <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						  <span class="glyphicon glyphicon-chevron-right"></span>
+						  <span class="sr-only">Next</span>
+						</a>
+					  </div>
+					
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div>
+			
+			<!-- <center><div style="width: 90%;"><img class="img-responsive" src="11.png" alt=" " style="width: 70%;" ></img></div></center>-->
+		<h3 class="margin" style="color: black; text-shadow: 1px 1px 1px #32cd32;">ORGANISED BY</h3>
+			<p style="color: black; text-shadow: 1px 1px 1px #32cd32; font-weight: bold;">DEPARTMENT OF CHEMISTRY<br>
 			AND<BR>
 			DEPARTMENT OF CIVIL ENGINEERING<br>
 			SPONSORED BY:- DST-SERB</p>
@@ -168,15 +287,15 @@
 
 <!-- Second Container -->
 <div id="committee" class="container-fluid bg-3 text-center">    
-  <h3 class="margin" style="color: #123; font-size: 1.5em;">ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
-  <div class="row">
-    <div class="col-sm-4">
+  <h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
+  <div class="row slideanim">
+    <div class="col-sm-4 slideanim">
 	<h3>PATRON</h3>
       <p>SHRI ANUJ AGARWAL<br>
 		(CHAIRMAN, DIT UNIVERSITY, DEHRADUN)
 		</p>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4 slideanim"> 
 	<h3>CHAIRMAN</h3>
       <p>PROF. K.K. RAINA<br>
 		(VICE CHANCELLOR, DIT UNIVERSITY, DEHRADUN)<BR><BR>
@@ -190,9 +309,9 @@
 		(HOD CHEMISTRY)</p>
     </div>
   </div><br>
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-sm-4">
-	<h3>CO-CONVENOR</h3>
+	<h3>CO-CONVENORS</h3>
       <p>DR TARUMAY GHOSHAL<br>
 		(HOD, CIVIL ENGINEERING)</p>
 	<p>DR. MANISHA DUSEJA<br>
@@ -205,13 +324,18 @@
 		<p>DR. PRAVEEN KUMAR</p>
     </div>
     <div class="col-sm-4"> 
-	<h3>INTERNATIONAL ADVISORY</h3>
-      <p>DR. ACHINTYA BEZBARUA<br>
-(NORTH DAKOTA STATE UNIVERSITY, USA)</p>
+	<h3>TREASURER</h3>
+      <p>DR. D.N. TRIPATHI</p>
     </div>
   </div><br>
-  <div class="row">
-    <div class="col-sm-12">
+  <div class="row slideanim">
+	<div class="col-sm-5">
+		<h3>ASSOCIATE ORGANIZING SECRETARY</h3>
+		<p>	DR. SUSHEEL PORWAL</p>
+		<P> MR. HARSH GOYAL</P>
+		<P> DR. ARTI CHATURVEDI</P>
+	</div>
+    <div class="col-sm-7">
 	<h3>INTERNATIONAL ADVISORY BOARD</h3>
 	<p>	DR. RAJENDRA DOBHAL(DG, UCOST, DEHRADUN, INDIA)</p>
 	<p>	DR. ACHINTYA BEZBARUA(NDSU, USA)</p>
@@ -222,31 +346,34 @@
 	<p>	DR. CHRYSAFIS VOGIATZIS(NCATU,NC,USA)</p>
 	</div>
   </div><BR>
-  <div class="row">
-    <div class="col-sm-12">
-	<h3>NATIONAL ADVISORY BOARD</h3>
-	<p>1. DR. R.K.KHANDAL, INDIA GLYCOLS LIMITED, NOIDA</p>
-	<p>2. DR. RANJEEV SHARMA, SECRETARY, SERB,DST, NEW DELHI</p>
-	<p>3. DR. ANJAN RAY, DIRECTOR, IIP, DEHRADUN</p>
-	<p>4. PROF. M.P. JAIN, CHANCELLOR, IUU, DEHRADUN</p>
-	<p>5. PROF. D.S. CHAUHAN, VC, GLA UNIVERSITY, MATHURA</p>
-	<p>6. DR. SAVITA, VC, FRI UNIVERSITY, DEHRADUN</p>
-	<p>7. DR. V.K. GARG, CU PUNJAB, BHANTID</p>
-	<p>8. PROF. SANTOSH J. GHARPURE, IIT BOMBAY</p>
-	<p>9. DR. B.R. GURJAR, IIT ROORKEE</p>
-	<p>10. DR. ARUN CHAKRABORTY, IIT KHARAGPUR</p>
-	<p>11. DR. DEVENDRA MOHAN, IIT BHU</p>
-	<p>12. DR. DINESH MOHAN, JNU, NEW DELHI</p>
-	<p>13. DR. LOK PRATAP SINGH, CBRI, ROORKEE</p>
-	<p>14. DR. H.C. MEHNDIRATTA, DIT UNIVERSITY</p>
-	<p>15. DR. TEJ PRAKASH, THAPAR UNIVERSITY, PATIYALA</p>
-	<p>16. DR. SHAILEY SINGHAL, UPES DEHRADUN</p>
-	<p>17. DR. RAJKUMAR SINGH, IIP, DEHRADUN</p>
-	<p>18. DR. D.S. NEGI, HNB GARWAL UNIVERSITY, DEHRADUN</p>
-	<p>19. DR. VINEET KUMAR, SCIENTIST-G,FRI, DEHRADUN</p>
-	<p>20. DR. AMIT SRIVASTAVA,VP,PLANET HERBS, DEHRADUN</p>
-	<p>21. DR. ANOOP NAUTIYAL, GATI FOUNDATION, DEHRADUN</p>
-	<p>22. DR. SHILPI AGGARWAL,UPES, DEHRADUN</p>
+  <div class="row slideanim">
+  <h3>NATIONAL ADVISORY BOARD</h3><br>
+    <div class="col-sm-6">
+		<p>PROF. M.P. JAIN, CHANCELLOR, IUU, DEHRADUN</p>
+		<p>PROF. D.S. CHAUHAN, VC, GLA UNIVERSITY, MATHURA</p>
+		<p>DR. ANJAN RAY, DIRECTOR, IIP, DEHRADUN</p>
+		<p>PROF. RAKESH MOHAN, DIT UNIVERSITY, DEHRADUN</p>
+		<p>DR. V.K. GARG, CU PUNJAB, BHANTID</p>
+		<p>PROF. SANTOSH J. GHARPURE, IIT BOMBAY</p>
+		<p>DR. B.R. GURJAR, IIT ROORKEE</p>
+		<p>DR. ARUN CHAKRABORTY, IIT KHARAGPUR</p>
+		<p>DR. DEVENDRA MOHAN, IIT BHU</p>
+		<p>DR. DINESH MOHAN, JNU, NEW DELHI</p>
+		<p>DR. LOK PRATAP SINGH, CBRI, ROORKEE</p>
+		<p>DR. H.C. MEHNDIRATTA, DIT UNIVERSITY</p>
+	</div>
+	<div class="col-sm-6">
+		<p>DR. CHANDRA PRAKASH, SSPL, DRDO, NEW DELHI</p>
+		<p>DR. TEJO PRAKASH, THAPAR UNIVERSITY, PATIYALA</p>
+		<p>DR. SHAILEY SINGHAL, UPES DEHRADUN</p>
+		<p>DR. RAJKUMAR SINGH, IIP, DEHRADUN</p>
+		<p>DR. D.S. NEGI, HNB GARWAL UNIVERSITY, DEHRADUN</p>
+		<p>DR. VINEET KUMAR, SCIENTIST-G,FRI, DEHRADUN</p>
+		<p>DR. AMIT SRIVASTAVA,VP,PLANET HERBS, DEHRADUN</p>
+		<p>DR. ANOOP NAUTIYAL, GATI FOUNDATION, DEHRADUN</p>
+		<p>DR. SHILPI AGGARWAL,UPES, DEHRADUN</p>
+		<p>DR. POONAM SHARMA, TERI, NEW DELHI</p>
+		<p>DR. PAWAN KUMAR, NIT, ROURKELA</p>
 	</div>
   </div>
 </div>
@@ -254,19 +381,19 @@
 <!-- Fourth container -->
 
 <div id="about" class="container-fluid bg-5">    
-  <h3 class="margin text-center" style="color: #123; font-size: 1.5em; font-family: 'Arial Black', Gadget, sans-seri;">ABOUT</h3>
-  <div class="row">
+  <h3 class="margin text-center slideanim" style="color: #123; font-size: 1.5em; font-family: 'Arial Black', Gadget, sans-seri;">ABOUT</h3>
+  <div class="row slideanim">
 	<div class="col-sm-2">
 	</DIV>
     <div class="col-sm-8">
-		<h3 class="p1">ABOUT DEHRADUN CITY</h3>
-		<div class="thumbnail">
+		<h3 class="p1 slideanim">ABOUT DEHRADUN CITY</h3>
+		<div class="thumbnail slideanim">
 		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Dehradun City</p></center>
-          <img src="ENVIRONMENT.jpg" alt="DIT" width="90%">
+          <img src="DOON1.jpg" alt="DIT" width="90%">
 		 </div><BR>
-		<p class="p1">Dehradun is the capital of Uttrakhand, a hilly North Indian state.
-			Situated at the foothills of the himalayas, Dehradun is a beautiful city
-			which is fine blend of a busy city and a picturesque hill station.
+		<p class="p1 slideanim">Dehradun, the capital of Uttrakhand is a beautiful city North India, 
+			situated at the foothills of the himalayas.
+			Dehradun is a fine blend of a busy city and a picturesque hill station.
 			Famously known as gateway to well known hilly areas of Mussoorie 
 			and garhwal, Dehadun is one of the oldest Indian cities. It is also 
 			recognized as the hub of education of North India. The city has been 
@@ -287,12 +414,12 @@
 	
     </div>
     <div class="col-sm-8">
-		<h3 class="p1">ABOUT DIT UNIVERSITY</h3>
-		<div class="thumbnail">
+		<h3 class="p1 slideanim">ABOUT DIT UNIVERSITY</h3>
+		<div class="thumbnail slideanim">
 		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">DIT University</p></center>
-          <img src="ENVIRONMENT.jpg" alt="DIT" width="90%">
+          <img src="DIT1.jpg" alt="DIT" width="80%">
 		 </div><BR>
-		<p class="p1">DIT University, a flagship organization of the Unison group, is a 
+		<p class="p1 slideanim">DIT University, a flagship organization of the Unison group, is a 
 			leading University in Uttrakhand. We offer undergraduate, 
 			postgraduate and phD programs in several streams of 
 			engineering, technology, management, architecture, pharmacy and 
@@ -305,18 +432,18 @@
     </div>
    </div>
    <br><br>
-   <div class="row">
+   <div class="row slideanim">
    <div class="col-sm-2">
 	
     </div>
     <div class="col-sm-8">
-		<h3 class="p1">DEPARTMENT OF CHEMISTRY</h3>
-		<div class="thumbnail">
+		<h3 class="p1 slideanim">DEPARTMENT OF CHEMISTRY</h3>
+		<div class="thumbnail slideanim">
 		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Department of chemistry, DIT</p></center>
-          <img src="ENVIRONMENT.jpg" alt="DIT" width="90%">
+          <img src="CHEM1.jpg" alt="DIT" width="80%">
 		  
 		 </div>
-		<p class="p1">DIT infuses a 20-years centre of excillence with a distinctly 
+		<p class="p1 slideanim">DIT infuses a 20-years centre of excillence with a distinctly 
 			non-traditional approach to the undergraduate education. In harmony 
 			withthe overall objectives of the University, the primary objective of 
 			the Chemistry Department is to develop desire, ability and 
@@ -337,13 +464,13 @@
 
     </div>
 		<div class="col-sm-8">
-			<h3 class="p1">DEPARTMENT OF CIVIL ENGINEERING</h3>
-			<div class="thumbnail">
+			<h3 class="p1 slideanim">DEPARTMENT OF CIVIL ENGINEERING</h3>
+			<div class="thumbnail slideanim">
 			<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Department of civil engineering, DIT</p></center>
-			  <img src="ENVIRONMENT.jpg" alt="DIT" width="90%">
+			  <img src="CIVIL1.jpg" alt="DIT" width="80%">
 			  
 			 </div>
-			<p class="p1">The Civil Engineering Department of the University was started in the 
+			<p class="p1 slideanim">The Civil Engineering Department of the University was started in the 
 				year 2009 offering Under Graduate course in Civil Engineering with 
 				an intake capacity of 60 students, which has now been increased to 
 				180. An M. Tech. program in Structural Engineering is also being 
@@ -359,9 +486,9 @@
  </div>
  
   <!-- Fifth Container -->
-<div id="theme" class="container-fluid bg-7 text-center">
-  <h3 class="margin">OBJECTIVE OF THE CONFERENCE</h3>
-  <div class="jumbotron">
+<div id="theme1" class="container-fluid bg-7 text-center">
+  <h3 class="margin slideanim">OBJECTIVE OF THE CONFERENCE</h3>
+  <div class="jumbotron slideanim">
 	<p style="color: black; text-align: left;">The Objective is to bring the leading Researchers, eminent scientists, technocrates and environmental policy makers into a single plateform
 	 where the new technological advancement and challengesnin the wider perspectives of environmental and its related 
 	 dimensions will be discussed and possible.<br>
@@ -376,8 +503,8 @@
 		
 		</div>
 		<div class="col-sm-8">
-			<h3 class="margin">THEME OF THE CONFERENCE</h3>
-			<div class="jumbotron">
+			<h3 class="margin slideanim">THEME OF THE CONFERENCE</h3>
+			<div class="jumbotron slideanim">
 				<ul>
 					<li>GREEN NANOTECHNOLOGY </li>
 					<li>	NANOENERGY </li>
@@ -400,19 +527,19 @@
 	</div>
 </div>
 
-<div id="speakers" class="container-fluid bg-7 text-center">
+<div id="speakers1" class="container-fluid bg-7 text-center">
 	<div class="row">
 		<div class="col-sm-2">
 		
 		</div>
 		<div class="col-sm-8">
-			<h3 class="margin gb">TARGET PARTICIPANTS</h3>
-			<div class="jumbotron">
+			<h3 class="margin gb slideanim">TARGET PARTICIPANTS</h3>
+			<div class="jumbotron slideanim">
 				<p class="p1" style="text-align: left;"><strong>
-					-Faculty from Renowned Institutions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Research Scholars<br>
-					-Industry Personnel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Government Engineers</strong>
+					-Faculty from Renowned Institutions<br>
+					-Research Scholars<br>
+					-Industry Personnel<br>
+					-Government Engineers</strong>
 				</p>
 			</div>
 		</div>
@@ -428,18 +555,18 @@
 		
 		</div>
 		<div class="col-sm-8">
-			<h3 class="margin gb">INVITED SPEAKERS</h3>
-			<div class="jumbotron">
+			<h3 class="margin gb slideanim">INVITED SPEAKERS</h3>
+			<div class="jumbotron slideanim">
 			<p class="p1">	Dr. Rajendra Dhobal, Director General, UCOST, Dehradun<br>
-				Dr. Savita, Vice Chancellor, FRI University Dehradun<br>
-				Dr. V.K. Jain, JNU, New Delhi<br>
+				Dr. Achintya Bezbarua (North Dakota State University, USA)<br>
+				Dr. Sudipita Seal (University of Central Florida)<br>
+				Dr. Robert Brueggeman (NDSU, USA)<br>
+				Dr. Debora Rpdrigues (University of Houston, TX, USA)<br>
+				Dr. Chrysafis Vogiatzis (NCATU,NC,USA)<br>
 				Dr. Dinesh Mohan, JNU, New Delhi<br>
 				Dr. B.R. Gurjar, IIT Roorkee<br>
-				Dr. Shailey Singhal, UPES, Dehradun<br>
-				Dr. Uma Malkania, GB Pant University, Pantnagar<br>
-				Dr. S.N. Singh, NPL, New Delhi<br>
-				Dr. T.K. Mandal, NPL, New Delhi<br>
-				Dr. C Sharma, NPL, New Delhi</p>
+				Mr Anoop Nautiyal, GATI Foundations, Dehradun<br>
+				Dr. Shailey Singhal, UPES, Dehradun<br></p>
 			</div>
 		</div>
 		<div class="col-sm-2">
@@ -450,12 +577,12 @@
 
 <!-- seventh Container -->
 <div id="registration" class="container-fluid bg-8" style="color:black;">
-	<h3 class="margin text-center">REGISTRATION FEE</h3>
+	<h3 class="margin text-center slideanim">REGISTRATION FEE</h3>
 	<div class="row">
 		<div class="col-sm-2">
 		
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-8 slideanim">
 		<p><i>Registration fee includes Conference Kit, Refreshment, Lunch, Dinner, etc.</i></p>
 			<table class="table table-striped">
 				<thead>
@@ -488,7 +615,7 @@
 		<div class="col-sm-2">
 		
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-8 slideanim">
 			<br>
 			<h3 class="margin text-center">MODE OF PAYMENT</h3>
 			<ol style="text-align: left">
@@ -510,10 +637,10 @@
 
 <!-- seighth Container -->
 <div id="schedule" class="container-fluid bg-9" style="color: #123;">
-	<h2 class="margin text-center">PROGRAM SCHEDULE</h2>
-	<h4 class="margin text-center"><strong>September 28, 2018 (Friday)</strong></h4>
+	<h2 class="margin text-center slideanim">PROGRAM SCHEDULE</h2>
+	<h4 class="margin text-center slideanim"><strong>September 28, 2018 (Friday)</strong></h4>
 	<div class="row">
-		<div class="col-sm-10">
+		<div class="col-sm-10 slideanim">
 			<table class="table table-condensed">
 				<thead>
 				  <tr>
@@ -577,10 +704,10 @@
 			  </table>
 		</div>
 	</div><br>
-	<h4 class="margin text-center"><strong>September 29, 2018 (Saturday)</strong></h4>
+	<h4 class="margin text-center slideanim"><strong>September 29, 2018 (Saturday)</strong></h4>
 	<div class="row">
 		<div class="col-sm-10">
-			<table class="table table-condensed">
+			<table class="table table-condensed slideanim">
 				<thead>
 				  <tr>
 					<th>S.No.</th>
@@ -631,7 +758,7 @@
 	<div class="row">
 		<div class="col-sm-2">
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-8 slideanim">
 			<h3 class="margin text-center"><u>CALL FOR RESEARCH PAPERS AND POSTERS</u></h3>
 			<p>Original Research paper can be submitted in the form of oral or poster presentation. It is the responsibility of the author to confirm that 
 			the work has not been presented earlier in the same form or as major component of the presentation ai any other such conference. Presenter will 
@@ -645,18 +772,58 @@
 	<div class="row">
 		<div class="col-sm-2">
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-8 slideanim">
 			<h3 class="margin text-center"><u>SUBMISSION OF PAPERS</u></h3>
 			<p>Participants should submit the abstract not exceeding 200 words (Min. 150 words) on a seperate sheet by 30th August 2018. The paper received 
 				after the due date will not br considered. The abstract should be typed on Times New Roman, 12 Pt, line spacing 1. The title of the paper 
 				should be bold, in capital letters and with a font size of 14 followed by the name of author(s) font size 12 along with their affiliation 
-				(italic, font size 12) and the presenting author should be underlined.</p>
+				(italic, font size 12) and the presenting author should be underlined.<br>
+				Submit online at : <br>
+				<strong><i>"entested@dituniversity.edu.in"</i></strong><br>
+				<I>FOR ANY QUERY, CONTACT :</I> +91-135-3000340, +91-9333168391, +91-9456540292, +91-9812428464</p>
+				
+				<marquee scrollamount=10 bgcolor=red><h4 style="color:white;"><strong><i>LAST DATE OF PAPER SUBMISSION : 31<sup>st</sup> AUG, 2018</i></strong></h4></marquee>
 		</div>
 		<div class="col-sm-2">
 		</div>
 	</div>	
 </div>
-	
+
+<div id="committee" class="container-fluid bg-3 text-center">    
+	<h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">LOCAL ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
+	<div class="row slideanim">
+		<div class="col-sm-6">
+			<p style="align: left;">Prof. N.V.S. Madhav<br>
+			Prof. M.C. Bhandari<br>
+			Dr. Surbhi Sachdeva<br>
+			Dr. Vishal Bharti<br>
+			Dr. Ritika Mehra<br>
+			Ms. Dipika Keshri<br>
+			Dr. Ravi Shukla<br>
+			Dr. Shilpi Singhal
+		</div>
+		<div class="col-sm-6">
+			<p style="align: left;">Prof. Chhabi Mishra<br>
+			Dr. Gagan Singh<br>
+			Dr. Rama Sushil<br>
+			Mr. Rahul Ganju<br>
+			Dr. Jagendra Kumar<br>
+			Mr. Subrata Mandal<br>
+			Mr. Aman Saini<br>
+			Mr. Rakesh Bhunia
+		</div>
+	</div>
+</div>
+
+<div id="committee" class="container-fluid bg-3 text-center">    
+	<h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">SPONSORS</h3></i>
+	<div class="row slideanim">
+		<div class="col-sm-12">	
+			<h3 style="color: black;">SCIENCE AND ENGINEERING RESEARCH BOARD, INDIA</h3><br>
+			<img src="logo.png" style="width: 250px; align:center;" alt=" "></img>
+		</div>
+	</div>
+</div>
 <!-- Footer -->
 <footer class="bg-4 text-center">
   <p>&copy; All rights reserved.</p> 
