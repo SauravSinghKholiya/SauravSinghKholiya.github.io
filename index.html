@@ -1,833 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <title>Environmental nenotechnology development</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  
-  <script>
-		$(document).ready(function(){
-		  // Add smooth scrolling to all links in navbar + footer link
-		  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-		   // Make sure this.hash has a value before overriding default behavior
-		  if (this.hash !== "") {
+  <head>
 
-			// Prevent default anchor click behavior
-			event.preventDefault();
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-			// Store hash
-			var hash = this.hash;
+    <title>My Blog</title>
 
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-			$('html, body').animate({
-			  scrollTop: $(hash).offset().top
-			}, 900, function(){
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-			  // Add hash (#) to URL when done scrolling (default click behavior)
-			  window.location.hash = hash;
-			  });
-			} // End if
-		  });
-		  
-		  $(document).ready(function () {
-  $(".navbar li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
-  });
-});
-		  
-		  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-		
-		
-</script>
- 
-  
-  <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
- .navbar {
-      margin-bottom: 0;
-      background-color: #2a2727;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #c7ffc0;
-      color: #ffffff;
-  }
-  .bg-2 { 
-      background-color: #123;
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff;
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f;
-	  height: 30px;
-      color: #fff;
-  }
-  .bg-5 { 
-      background-color: #c7ffc0;
-      color: #fff;
-  }
-  .bg-7 {
-		background-color: #123;
-      color: #fff;
-	  }
-   .bg-8 {
-		background-color: #fff;
-	  }
-	.bg-9 {
-			background-color: hsla(89, 43%, 51%, 0.3);
-	}
-  .p1 {
-		color: 	#000;
-		
-		}
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  li { color: black; }
- 
- .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-</style>
-</head>
-<body>
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  </head>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Saurav Singh Kholiya</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Me</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Welcome To My Blog</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Man must explore, and this is exploration at its greatest
+              </h2>
+              <h3 class="post-subtitle">
+                Problems look mighty small from 150 miles up
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2018</p>
+          </div>
+          <hr>
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+              </h2>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 18, 2018</p>
+          </div>
+          <hr>
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Science has not yet mastered prophecy
+              </h2>
+              <h3 class="post-subtitle">
+                We predict too much for the next year and yet far too little for the next ten.
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2018</p>
+          </div>
+          <hr>
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Failure is not an option
+              </h2>
+              <h3 class="post-subtitle">
+                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on July 8, 2018</p>
+          </div>
+          <hr>
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#committee">COMMITTEE</a></li>
-		<li><a href="#about">ABOUT</a></li>
-        <li><a href="#theme">THEME</a></li>
-        <li><a href="#speakers">SPEAKERS</a></li>
-		<li><a href="#registration">REGISTRATION</a></li>
-        <li><a href="#schedule">SCHEDULE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
+    <hr>
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-	<div class="row">
-		<img src="logo24.png" style="width: 15%; margin-left:3%; float: left;" alt=" "></img>
-		<!-- <img src="logo.png" style="width: 15%; align:center;" alt=" "></img> -->
-		<img src="logo_1.png" style="width: 15%; margin-right: 3%; float: right;" alt=" "></img>
-	</div>
-	
-	<h3 class="margin" style="font-family: 'Lucida Console', Monaco, monospace;
-			text-shadow: 1px 1px 1px #32cd32; font-weight: bold; font-size: 1.5em; color: #123;">INTERNATIONAL CONFERENCE<BR> ON <BR>
-			ENVIRONMENTAL NANOTECHNOLOGY FOR<BR>
-			SOCIO ECONOMIC DEVELOPMENT OF INDIA<BR>
-			(ENTESTED 2018)<br></h3><h4 class="margin" style="font-family: 'Lucida Console', Monaco, monospace;
-			text-shadow: 1px 1px 1px #32cd32; font-weight: bold; font-size: 1.2em; color: #123;">DATE:
-			<br>28<sup>th</sup> & 29<sup>th</sup> SEPTEMBER,2018</h4>
-			
-			<!-- Carouser -->
-			<div class="row">
-				<div class="col-sm-2">
-				</div>
-				<div class="col-sm-8">
-					  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-						  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						  <li data-target="#myCarousel" data-slide-to="1"></li>
-						  <li data-target="#myCarousel" data-slide-to="2"></li>
-						  <li data-target="#myCarousel" data-slide-to="3"></li>
-						  <li data-target="#myCarousel" data-slide-to="4"></li>
-						</ol>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
-						  <div class="item active">
-							<img src="DIT1.JPG" alt="DITU" style="width:100%;">
-						  </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-						  <div class="item">
-							<img src="DIT2.JPG" alt="DITU" style="width:100%;">
-						  </div>
-						
-						  <div class="item">
-							<img src="DIT3.JPG" alt="DITU" style="width:100%;">
-						  </div>
-						  
-						  <div class="item">
-							<img src="DIT4.JPG" alt="DITU" style="width:100%;">
-						  </div>
-						  
-						  <div class="item">
-							<img src="DIT5.JPG" alt="DITU" style="width:100%;">
-						  </div>
-						</div>
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
 
-						<!-- Left and right controls -->
-						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-						  <span class="glyphicon glyphicon-chevron-left"></span>
-						  <span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel" data-slide="next">
-						  <span class="glyphicon glyphicon-chevron-right"></span>
-						  <span class="sr-only">Next</span>
-						</a>
-					  </div>
-					
-				</div>
-				<div class="col-sm-2">
-				</div>
-			</div>
-			
-			<!-- <center><div style="width: 90%;"><img class="img-responsive" src="11.png" alt=" " style="width: 70%;" ></img></div></center>-->
-		<h3 class="margin" style="color: black; text-shadow: 1px 1px 1px #32cd32;">ORGANISED BY</h3>
-			<p style="color: black; text-shadow: 1px 1px 1px #32cd32; font-weight: bold;">DEPARTMENT OF CHEMISTRY<br>
-			AND<BR>
-			DEPARTMENT OF CIVIL ENGINEERING<br>
-			SPONSORED BY:- DST-SERB</p>
-		</h3>
-</div>
+  </body>
 
-
-
-<!-- Second Container -->
-<div id="committee" class="container-fluid bg-3 text-center">    
-  <h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
-  <div class="row slideanim">
-    <div class="col-sm-4 slideanim">
-	<h3>PATRON</h3>
-      <p>SHRI ANUJ AGARWAL<br>
-		(CHAIRMAN, DIT UNIVERSITY, DEHRADUN)
-		</p>
-    </div>
-    <div class="col-sm-4 slideanim"> 
-	<h3>CHAIRMAN</h3>
-      <p>PROF. K.K. RAINA<br>
-		(VICE CHANCELLOR, DIT UNIVERSITY, DEHRADUN)<BR><BR>
-		PROF. S. SWAMINATHAN<BR>
-		(PRO VICE CHANCELLOR, DIT UNIVERSITY, DEHRADUN)
-		</p>
-    </div>
-    <div class="col-sm-4"> 
-	<h3>CONVENOR</h3>
-      <p>PROF. NAVEEN SINGHAL<br>
-		(HOD CHEMISTRY)</p>
-    </div>
-  </div><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-	<h3>CO-CONVENORS</h3>
-      <p>DR TARUMAY GHOSHAL<br>
-		(HOD, CIVIL ENGINEERING)</p>
-	<p>DR. MANISHA DUSEJA<br>
-(DEPARTMENT OF CHEMISTRY)</p>
-    </div>
-    <div class="col-sm-4"> 
-	<h3>ORGANIZING SECRETARY</h3>
-      <p>DR. JABRINDER SINGH</p>
-		<p>MR. HARSH GOYAL</p>
-		<p>DR. PRAVEEN KUMAR</p>
-    </div>
-    <div class="col-sm-4"> 
-	<h3>TREASURER</h3>
-      <p>DR. D.N. TRIPATHI</p>
-    </div>
-  </div><br>
-  <div class="row slideanim">
-	<div class="col-sm-5">
-		<h3>ASSOCIATE ORGANIZING SECRETARY</h3>
-		<p>	DR. SUSHEEL PORWAL</p>
-		<P> MR. HARSH GOYAL</P>
-		<P> DR. ARTI CHATURVEDI</P>
-	</div>
-    <div class="col-sm-7">
-	<h3>INTERNATIONAL ADVISORY BOARD</h3>
-	<p>	DR. RAJENDRA DOBHAL(DG, UCOST, DEHRADUN, INDIA)</p>
-	<p>	DR. ACHINTYA BEZBARUA(NDSU, USA)</p>
-	<p>	DR. SUDIPTA SEAL(UNIVERSITY OF CENTRAL FLORIDA)</p>
-	<p>	DR. ANN HAZEL P. JAVIER(ED, PUSOD INC., PHILLPPINES)</p>
-	<p>	DR. ROBERT BRUEGGEMAN(NDSU, USA)</p>
-	<p>	DR. DEBORA RODRIGUES(UNIVERSITY OF HOUSTON, TX,USA)</p>
-	<p>	DR. CHRYSAFIS VOGIATZIS(NCATU,NC,USA)</p>
-	</div>
-  </div><BR>
-  <div class="row slideanim">
-  <h3>NATIONAL ADVISORY BOARD</h3><br>
-    <div class="col-sm-6">
-		<p>PROF. M.P. JAIN, CHANCELLOR, IUU, DEHRADUN</p>
-		<p>PROF. D.S. CHAUHAN, VC, GLA UNIVERSITY, MATHURA</p>
-		<p>DR. ANJAN RAY, DIRECTOR, IIP, DEHRADUN</p>
-		<p>PROF. RAKESH MOHAN, DIT UNIVERSITY, DEHRADUN</p>
-		<p>DR. V.K. GARG, CU PUNJAB, BHANTID</p>
-		<p>PROF. SANTOSH J. GHARPURE, IIT BOMBAY</p>
-		<p>DR. B.R. GURJAR, IIT ROORKEE</p>
-		<p>DR. ARUN CHAKRABORTY, IIT KHARAGPUR</p>
-		<p>DR. DEVENDRA MOHAN, IIT BHU</p>
-		<p>DR. DINESH MOHAN, JNU, NEW DELHI</p>
-		<p>DR. LOK PRATAP SINGH, CBRI, ROORKEE</p>
-		<p>DR. H.C. MEHNDIRATTA, DIT UNIVERSITY</p>
-	</div>
-	<div class="col-sm-6">
-		<p>DR. CHANDRA PRAKASH, SSPL, DRDO, NEW DELHI</p>
-		<p>DR. TEJO PRAKASH, THAPAR UNIVERSITY, PATIYALA</p>
-		<p>DR. SHAILEY SINGHAL, UPES DEHRADUN</p>
-		<p>DR. RAJKUMAR SINGH, IIP, DEHRADUN</p>
-		<p>DR. D.S. NEGI, HNB GARWAL UNIVERSITY, DEHRADUN</p>
-		<p>DR. VINEET KUMAR, SCIENTIST-G,FRI, DEHRADUN</p>
-		<p>DR. AMIT SRIVASTAVA,VP,PLANET HERBS, DEHRADUN</p>
-		<p>DR. ANOOP NAUTIYAL, GATI FOUNDATION, DEHRADUN</p>
-		<p>DR. SHILPI AGGARWAL,UPES, DEHRADUN</p>
-		<p>DR. POONAM SHARMA, TERI, NEW DELHI</p>
-		<p>DR. PAWAN KUMAR, NIT, ROURKELA</p>
-	</div>
-  </div>
-</div>
-
-<!-- Fourth container -->
-
-<div id="about" class="container-fluid bg-5">    
-  <h3 class="margin text-center slideanim" style="color: #123; font-size: 1.5em; font-family: 'Arial Black', Gadget, sans-seri;">ABOUT</h3>
-  <div class="row slideanim">
-	<div class="col-sm-2">
-	</DIV>
-    <div class="col-sm-8">
-		<h3 class="p1 slideanim">ABOUT DEHRADUN CITY</h3>
-		<div class="thumbnail slideanim">
-		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Dehradun City</p></center>
-          <img src="DOON1.jpg" alt="DIT" width="90%">
-		 </div><BR>
-		<p class="p1 slideanim">Dehradun, the capital of Uttrakhand is a beautiful city North India, 
-			situated at the foothills of the himalayas.
-			Dehradun is a fine blend of a busy city and a picturesque hill station.
-			Famously known as gateway to well known hilly areas of Mussoorie 
-			and garhwal, Dehadun is one of the oldest Indian cities. It is also 
-			recognized as the hub of education of North India. The city has been 
-			ruled by mughal, sikh as well as gorkha rulers in the past. Later on, 
-			several educational Institutions of repute were established in this 
-			city. Tapkeshwar temple, Buddha temple, Shiv mandir on Mussoorie 
-			road, Gun hill, Nag devta temple, Bhadraj temple and Surkhanda Devi 
-			are some of the well-known places to visit.
-		</p>
-	</div>
-	<div class="col-sm-2">
-	
-    </div>
-   </div>
-   <br><br>
-   <div class="row">
-   <div class="col-sm-2">
-	
-    </div>
-    <div class="col-sm-8">
-		<h3 class="p1 slideanim">ABOUT DIT UNIVERSITY</h3>
-		<div class="thumbnail slideanim">
-		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">DIT University</p></center>
-          <img src="DIT1.JPG" alt="DIT" width="80%">
-		 </div><BR>
-		<p class="p1 slideanim">DIT University, a flagship organization of the Unison group, is a 
-			leading University in Uttrakhand. We offer undergraduate, 
-			postgraduate and phD programs in several streams of 
-			engineering, technology, management, architecture, pharmacy and 
-			applied sciences. Mussoorie, the queen of hills is just 20km from 
-			DIT University.
-		</p>
-	</div>
-	<div class="col-sm-2">
-	
-    </div>
-   </div>
-   <br><br>
-   <div class="row slideanim">
-   <div class="col-sm-2">
-	
-    </div>
-    <div class="col-sm-8">
-		<h3 class="p1 slideanim">DEPARTMENT OF CHEMISTRY</h3>
-		<div class="thumbnail slideanim">
-		<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Department of chemistry, DIT</p></center>
-          <img src="CHEM1.JPG" alt="DIT" width="80%">
-		  
-		 </div>
-		<p class="p1 slideanim">DIT infuses a 20-years centre of excillence with a distinctly 
-			non-traditional approach to the undergraduate education. In harmony 
-			withthe overall objectives of the University, the primary objective of 
-			the Chemistry Department is to develop desire, ability and 
-			ambition of students to apply the theoritical and technical knowledge 
-			for sustainable and analytical solutions to the problems of scientific 
-			and social interests. Department is also fulfilling the responsibility of 
-			developing outstanding intellectuals by imparting guidance and 
-			mentoring them.
-		</p>
-	</div>
-	<div class="col-sm-2">
-
-    </div>
-	</div>
-	<br><br>
-	<div class="row">
-	<div class="col-sm-2">
-
-    </div>
-		<div class="col-sm-8">
-			<h3 class="p1 slideanim">DEPARTMENT OF CIVIL ENGINEERING</h3>
-			<div class="thumbnail slideanim">
-			<center><p style="color: black; font-family: 'Arial Black', Gadget, sans-seri;">Department of civil engineering, DIT</p></center>
-			  <img src="CIVIL1.JPG" alt="DIT" width="80%">
-			  
-			 </div>
-			<p class="p1 slideanim">The Civil Engineering Department of the University was started in the 
-				year 2009 offering Under Graduate course in Civil Engineering with 
-				an intake capacity of 60 students, which has now been increased to 
-				180. An M. Tech. program in Structural Engineering is also being 
-				offered. The department has well qualified, experienced and 
-				dedicated faculty members and lab technicians. The Department has 
-				state-of-the-art laboratories and modern infrastructure.
-			</p>
-		</div>
-		<div class="col-sm-2">
-
-    </div>
-	</div>
- </div>
- 
-  <!-- Fifth Container -->
-<div id="theme1" class="container-fluid bg-7 text-center">
-  <h3 class="margin slideanim">OBJECTIVE OF THE CONFERENCE</h3>
-  <div class="jumbotron slideanim">
-	<p style="color: black; text-align: left;">The Objective is to bring the leading Researchers, eminent scientists, technocrates and environmental policy makers into a single plateform
-	 where the new technological advancement and challengesnin the wider perspectives of environmental and its related 
-	 dimensions will be discussed and possible.<br>
-	 Suggestions will be submitted to government agencies.
-	</div>
-</div>
- 
- <!-- Fifth Container -->
-<div id="theme" class="container-fluid bg-7 text-center">
-	<div class="row">
-		<div class="col-sm-2">
-		
-		</div>
-		<div class="col-sm-8">
-			<h3 class="margin slideanim">THEME OF THE CONFERENCE</h3>
-			<div class="jumbotron slideanim">
-				<ul>
-					<li>GREEN NANOTECHNOLOGY </li>
-					<li>	NANOENERGY </li>
-					<li>	NANOTOXICITY, RISK, FATE, AND TRANSPORT </li>
-					<li>	NANOTECHNOLOGY FOR HEALTHCARE AND PUBLIC HEALTH</li>
-					<li>	NANOSENSORS AND MEASUREMENT</li>
-					<li>	NANOELECTRONICS</li>
-					<li>	ENVIRONMENTAL NANOTECHNOLOGY</li>
-					<li>	NANOART</li>
-					<li>	NANOMATERIALS IN CONSUMER PRODUCTS</li>
-					<li>	NANOTECHNOLOGY EDUCATION</li>
-					<li>	NANOTECHNOLOGY POLICIES IN DEVELOPING COUNTRIES</li>
-					<li>	NANOTECHNOLOGY AND THE PUBLIC</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-sm-2">
-		
-		</div>
-	</div>
-</div>
-
-<div id="speakers1" class="container-fluid bg-7 text-center">
-	<div class="row">
-		<div class="col-sm-2">
-		
-		</div>
-		<div class="col-sm-8">
-			<h3 class="margin gb slideanim">TARGET PARTICIPANTS</h3>
-			<div class="jumbotron slideanim">
-				<p class="p1" style="text-align: left;"><strong>
-					-Faculty from Renowned Institutions<br>
-					-Research Scholars<br>
-					-Industry Personnel<br>
-					-Government Engineers</strong>
-				</p>
-			</div>
-		</div>
-		<div class="col-sm-2">
-		
-		</div>
-	</div>	
-</div>
-<!-- sixth Container -->
-<div id="speakers" class="container-fluid bg-7 text-center">
-	<div class="row">
-		<div class="col-sm-2">
-		
-		</div>
-		<div class="col-sm-8">
-			<h3 class="margin gb slideanim">INVITED SPEAKERS</h3>
-			<div class="jumbotron slideanim">
-			<p class="p1">	Dr. Rajendra Dhobal, Director General, UCOST, Dehradun<br>
-				Dr. Achintya Bezbarua (North Dakota State University, USA)<br>
-				Dr. Sudipita Seal (University of Central Florida)<br>
-				Dr. Robert Brueggeman (NDSU, USA)<br>
-				Dr. Debora Rpdrigues (University of Houston, TX, USA)<br>
-				Dr. Chrysafis Vogiatzis (NCATU,NC,USA)<br>
-				Dr. Dinesh Mohan, JNU, New Delhi<br>
-				Dr. B.R. Gurjar, IIT Roorkee<br>
-				Mr Anoop Nautiyal, GATI Foundations, Dehradun<br>
-				Dr. Shailey Singhal, UPES, Dehradun<br></p>
-			</div>
-		</div>
-		<div class="col-sm-2">
-		
-		</div>
-	</div>
-</div>
-
-<!-- seventh Container -->
-<div id="registration" class="container-fluid bg-8" style="color:black;">
-	<h3 class="margin text-center slideanim">REGISTRATION FEE</h3>
-	<div class="row">
-		<div class="col-sm-2">
-		
-		</div>
-		<div class="col-sm-8 slideanim">
-		<p><i>Registration fee includes Conference Kit, Refreshment, Lunch, Dinner, etc.</i></p>
-			<table class="table table-striped">
-				<thead>
-				  <tr>
-					<th>Category</th>
-					<th></th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>Student/Research Scholar</td>
-					<td>INR 1500/-</td>
-				  </tr>
-				  <tr>
-					<td>Faculty/Industry</td>
-					<td>INR 2500/-</td>
-				  </tr>
-				  <tr>
-					<td>International Deligate</td>
-					<td>INR 4000/-</td>
-				  </tr>
-				</tbody>
-			  </table>
-		</div>
-		<div class="col-sm-2">
-		
-		</div>
-	</div><br>
-	<div class="row">
-		<div class="col-sm-2">
-		
-		</div>
-		<div class="col-sm-8 slideanim">
-			<br>
-			<h3 class="margin text-center">MODE OF PAYMENT</h3>
-			<ol style="text-align: left">
-				<li>DD in favour of "DIT UNIVERSITY, DEHRADUN"</li>
-				<li>For paytm :- <a href="http://m.p-y.tm/dit_web">"http://m.p-y.tm/dit_web"</a><br>
-					(Mentioning International Conference)</li>
-				<li>Account Name: DIT University<br>
-					Bank: Axis Bank,Rajpur Road,Dehradun<br>
-					Account No: 913010053110084<br>
-					IFSC Code: UTIB0000093</li>
-			</ol>
-			<marquee scrollamount=10 bgcolor=red><h4 style="color:white;"><strong><i>LAST DATE OF REGISTRATION : 31<sup>st</sup> AUG, 2018</i></strong></h4></marquee>
-		
-		</div>
-		<div class="col-sm-2">
-		
-		</div>
-	</div>
-</div>
-
-<!-- seighth Container -->
-<div id="schedule" class="container-fluid bg-9" style="color: #123;">
-	<h2 class="margin text-center slideanim">PROGRAM SCHEDULE</h2>
-	<h4 class="margin text-center slideanim"><strong>September 28, 2018 (Friday)</strong></h4>
-	<div class="row">
-		<div class="col-sm-10 slideanim">
-			<table class="table table-condensed">
-				<thead>
-				  <tr>
-					<th>S.No.</th>
-					<th>Event</th>
-					<th>Timing</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>01</td>
-					<td>Spot Registration</td>
-					<td>08:30 - 10:00 AM</td>
-				  </tr>
-				  <tr>
-					<td>02</td>
-					<td>Inaugural Function</td>
-					<td>10:00 - 11:00 AM</td>
-				  </tr>
-				  <tr>
-					<td>03</td>
-					<td>Key Note Address</td>
-					<td>11:00 - 11:30 AM</td>
-				  </tr>
-				  <tr>
-					<td>04</td>
-					<td>Hi Tea</td>
-					<td>11:30 - 12:00 PM</td>
-				  </tr>
-				  <tr>
-					<td>05</td>
-					<td>Technical Session-I</td>
-					<td>12:00 - 01:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>06</td>
-					<td>Lunch</td>
-					<td>01:30 - 02:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>07</td>
-					<td>Technical Session-II</td>
-					<td>02:30 - 04:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>08</td>
-					<td>Poster Presentation on NANOART</td>
-					<td>04:30 - 05:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>09</td>
-					<td>Cultural Programme</td>
-					<td>05:30 - 07:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>10</td>
-					<td>Conference Dinner</td>
-					<td>08:00 - 10:00 PM</td>
-				  </tr>
-				</tbody>
-			  </table>
-		</div>
-	</div><br>
-	<h4 class="margin text-center slideanim"><strong>September 29, 2018 (Saturday)</strong></h4>
-	<div class="row">
-		<div class="col-sm-10">
-			<table class="table table-condensed slideanim">
-				<thead>
-				  <tr>
-					<th>S.No.</th>
-					<th>Event</th>
-					<th>Timing</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>01</td>
-					<td>Technical Session-III</td>
-					<td>09:00 - 10:30 AM</td>
-				  </tr>
-				  <tr>
-					<td>02</td>
-					<td>Tea</td>
-					<td>10:30 - 11:00 AM</td>
-				  </tr>
-				  <tr>
-					<td>03</td>
-					<td>Technical Session-IV</td>
-					<td>11:00 - 12:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>04</td>
-					<td>Lunch</td>
-					<td>12:30 - 01:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>05</td>
-					<td>Technical Session-V</td>
-					<td>01:30 - 03:00 PM</td>
-				  </tr>
-				  <tr>
-					<td>06</td>
-					<td>Valedictory Function and Prize Distribution</td>
-					<td>03:00 - 04:30 PM</td>
-				  </tr>
-				  <tr>
-					<td>07</td>
-					<td>Tea</td>
-					<td>04:30 - 05:00 PM</td>
-				  </tr>
-				</tbody>
-			  </table>
-		</div>
-	</div><br>
-	<div class="row">
-		<div class="col-sm-2">
-		</div>
-		<div class="col-sm-8 slideanim">
-			<h3 class="margin text-center"><u>CALL FOR RESEARCH PAPERS AND POSTERS</u></h3>
-			<p>Original Research paper can be submitted in the form of oral or poster presentation. It is the responsibility of the author to confirm that 
-			the work has not been presented earlier in the same form or as major component of the presentation ai any other such conference. Presenter will 
-			be given 7 minutes to present their research work and 3 minutes for discussion if selected for an oral presentation. Selected papers will be published 
-			in the conference proceedings/gournal. </p>
-		</div>
-		<div class="col-sm-2">
-		</div>
-	</div>	
-	<br>
-	<div class="row">
-		<div class="col-sm-2">
-		</div>
-		<div class="col-sm-8 slideanim">
-			<h3 class="margin text-center"><u>SUBMISSION OF PAPERS</u></h3>
-			<p>Participants should submit the abstract not exceeding 200 words (Min. 150 words) on a seperate sheet by 30th August 2018. The paper received 
-				after the due date will not br considered. The abstract should be typed on Times New Roman, 12 Pt, line spacing 1. The title of the paper 
-				should be bold, in capital letters and with a font size of 14 followed by the name of author(s) font size 12 along with their affiliation 
-				(italic, font size 12) and the presenting author should be underlined.<br>
-				Submit online at : <br>
-				<strong><i>"entested@dituniversity.edu.in"</i></strong><br>
-				<I>FOR ANY QUERY, CONTACT :</I> +91-135-3000340, +91-9333168391, +91-9456540292, +91-9812428464</p>
-				
-		</div>
-		<div class="col-sm-2">
-		</div>
-	</div>	
-</div>
-
-<div id="committee" class="container-fluid bg-3 text-center">    
-	<h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">LOCAL ORGANISING COMMITTEE <br><br><i class="fa fa-users" style="font-size:45px;"></h3></i>
-	<div class="row slideanim">
-		<div class="col-sm-6">
-			<p style="align: left;">Prof. N.V.S. Madhav<br>
-			Prof. M.C. Bhandari<br>
-			Dr. Surbhi Sachdeva<br>
-			Dr. Vishal Bharti<br>
-			Dr. Ritika Mehra<br>
-			Ms. Dipika Keshri<br>
-			Dr. Ravi Shukla<br>
-			Dr. Shilpi Singhal
-		</div>
-		<div class="col-sm-6">
-			<p style="align: left;">Prof. Chhabi Mishra<br>
-			Dr. Gagan Singh<br>
-			Dr. Rama Sushil<br>
-			Mr. Rahul Ganju<br>
-			Dr. Jagendra Kumar<br>
-			Mr. Subrata Mandal<br>
-			Mr. Aman Saini<br>
-			Mr. Rakesh Bhunia
-		</div>
-	</div>
-</div>
-
-<div id="committee" class="container-fluid bg-3 text-center">    
-	<h3 class="margin slideanim" style="color: #123; font-size: 1.5em;">SPONSORS</h3></i>
-	<div class="row slideanim">
-		<div class="col-sm-12">	
-			<h3 style="color: black;">SCIENCE AND ENGINEERING RESEARCH BOARD, INDIA</h3><br>
-			<img src="logo.png" style="width: 250px; align:center;" alt=" "></img>
-		</div>
-	</div>
-</div>
-<!-- Footer -->
-<footer class="bg-4 text-center">
-  <p>&copy; All rights reserved.</p> 
-</footer>
-
-</body>
 </html>
