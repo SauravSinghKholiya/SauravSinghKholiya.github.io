@@ -87,13 +87,13 @@
 			as their size exceeds 2Gb. But for reference, their images are given below.) The details of these files is given in this <a href="project_earthquake/
 			ReadMe.md">ReadMe</a> file.</p>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq1.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq1.jpg" alt="">
             <span class="caption text-muted">Building_Ownership_Use</span>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq2.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq2.jpg" alt="">
             <span class="caption text-muted">Building_Structure</span>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq3.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq3.jpg" alt="">
             <span class="caption text-muted">Building_Structure</span>
 			
             <p>The task is to use these CSV files data and combine it to create a new set of training data. After training the model, predict the damage grade 
@@ -106,7 +106,7 @@
 			to <i>train.csv</i> file. We now filter the data by removing the columns with least importance. There are many techniques used to check the important 
 			attributes as given <a href="https://www.altexsoft.com/blog/datascience/preparing-your-dataset-for-machine-learning-8-basic-techniques-that-make-your-data-better/">here</a>. Now the training dataset is ready for training the model.</p>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq4.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq4.jpg" alt="">
             <span class="caption text-muted">train.csv</span>
 			
 			<p>We split training data into two parts: <i>x_train</i> and <i>y_train</i>. <br>
@@ -123,13 +123,13 @@
             <p>Once the model is trained, you prepare the testing data. We are give the remaining 30% of building ids for which we have to predict the damage grade.
 			We add the same attributes in <i>test.csv</i> as we added in <i>train.csv</i>.</p>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq5.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq5.jpg" alt="">
             <span class="caption text-muted">test.csv</span>
 			
 			<p>After running the trained model on test dataset, we get the predicted result for the input. We now seperate the result into a seperate <i>submission.csv</i> file 
 			and save it.</p>
 			
-			<img class="img-fluid" src="project_earthquake/img/eq6.png" alt="">
+			<img class="img-fluid" src="project_earthquake/img/eq6.jpg" alt="">
             <span class="caption text-muted">submission.csv</span>
 			
 			<p>The complete code and reference to this project is given in my 
