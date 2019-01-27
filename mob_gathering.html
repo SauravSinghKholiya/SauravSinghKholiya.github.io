@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Projects</title>
+    <title>Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,86 +56,64 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>My Projects</h1>
+            <div class="post-heading">
+              <h1>Stop and Curve points in a Mob Gathering</h1>
+              <h2 class="subheading">To find the stop points and curves in a mob gathering using GPS datasets.</h2>
+              <span class="meta">Posted by
+                <a href="about.html">Saurav Singh Kholiya</a>
+                on November 2, 2018</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-		<div class="post-preview">
-            <a href="mob_gathering.html">
-              <h2 class="post-title">
-                Stop and Curve points in a Mob Gathering
-              </h2>
-              <h3 class="post-subtitle">
-                To find the stop points and curves in a mob gathering using GPS datasets.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="about.html">Saurav Singh Kholiya</a>
-              on November 2, 2018</p>
-          </div>
-		  <hr>
-          <div class="post-preview">
-            <a href="opencv.html">
-              <h2 class="post-title">
-                Image Processing Project - (Using OpenCV)
-              </h2>
-              <h3 class="post-subtitle">
-                To find the complete river trajectory by satellite images over a week.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="about.html">Saurav Singh Kholiya</a>
-              on September 10, 2018</p>
-          </div>
-          <hr>
-		  <div class="post-preview">
-            <a href="earthquake.html">
-              <h2 class="post-title">
-                Forecasting Project - (Using Machine Learning techniques)
-              </h2>
-              <h3 class="post-subtitle">
-                To predict the amount of damage caused to buildings by an earthquake.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="about.html">Saurav Singh Kholiya</a>
-              on July 24, 2018</p>
-          </div>
-		  <hr>
-		  <div class="post-preview">
-            <a href="snake.html">
-              <h2 class="post-title">
-                Snake Game (Using Javascript)
-              </h2>
-              <h3 class="post-subtitle">
-                This is a basic snake game created using javascript.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="about.html">Saurav Singh Kholiya</a>
-              on February 17, 2018</p>
-          </div>
-		  <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="index.html">My Blog &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+			<p>In this project, we have to find the behaviour of a mob movement or gathering. A mob is generally a huge gathering of people and their leader in a place. 
+			Initially, there is a gathering of few people, then few more join them in a place, then more add and finally the mob is gathered at a place. 
+			This projects helps us to determine the route and the path of the mob gathered.</p>
+			
+			<p>Now our Aim was to find curve and stop points from the datasets.
+			<ul>
+			<li><i>Curved points: </i>Curved points are those points in a GPS dataset where there is a sharp curved path in the trajectory.</li>
+			<li><i>Stop points: </i>Stop points are those points in a GPS dataset where the subject has stopped any movement.</li>
+			</ul>
+			</p>
+			
+			<p>We were not given any dataset for this practical. So our first aim was to gather the dataset. Now how can we see the route of a person? As everyone has 
+			smartphone, so its GPS location can be extracted. Now to extract GPS locations for our project, we used GPS Logger. This can be downloaded from Google Playstore.
+			Click <a href="https://play.google.com/store/apps/details?id=com.mendhak.gpslogger&hl=en">here</a> to download it.</p>
+			
+			<p>We used 3 devices and collected the dataset by moving from different locations and meeting at a place. Three csv files were collected. 
+			<i>Sauravgps.csv, vinaygps.csv,</i> and <i>shailengps.csv </i> Only one csv file is present in the repository for reference.</p>
+			
+			<p>After extracting GPS datasets in a csv format using GPS Logger, we used various algorithms as mentioned in the python scripts in the repository. 
+			The stop points and curved points were plotted and are shown below: </p>
+			
+			<img class="img-fluid" src="mob_gathering/curved_points.jpg" alt="">
+            <span class="caption text-muted">Curved points</span>
+			<br>
+			<img class="img-fluid" src="mob_gathering/stop_points.jpg" alt="">
+            <span class="caption text-muted">Stop Points</span>
+			
+			<p>The complete code and reference to this project is given in my 
+			<a href="https://github.com/SauravSinghKholiya/mob_gathering">github repository </a>.<br>
+			<strong>Thank You for reading.</strong></p>
+
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
