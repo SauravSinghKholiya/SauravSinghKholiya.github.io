@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Saurav Singh Kholiya</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Me</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>A University Website (University Network)</h1>
+              <h2 class="subheading">To make a website which would provide notes to students of the universitity.</h2>
+              <span class="meta">Posted by
+                <a href="about.html">Saurav Singh Kholiya</a>
+                on May 18, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+			<p>The main idea behind this project was the rush of a college life. There are many extra curricular activities going on throught the campus. Not 
+			everyone is able to cope up with the studies and keep himself updated. So when exams are near, all students rush to gather notes and 
+			books to prepare for exams. As there are many different resources, but these are not properly arranged. So to overcome this difficulty, we 
+			developed a dynamic website called <i>University Network.</i> (As it is being upgraded hence it is currently running in localhost.)</p>
+			
+			<p>Note : <i>Before diving into project, you should have basic knowledge of web.</i> <br>
+			The model of the project is described below.</p>
+			
+			<h2 class="section-heading">Basic working of a dynamic website</h2>
+            <p>A dynamic website is the one in which user request for a data (or sends a data) using http request to the server. The server is programmed in such 
+			a way that it reads what user has requested. It makes certain queries to the databases and fetches (or saves) the data from the database and shows it on 
+			the users screen. <br> So it is basically three layered architecture:
+			<ul>
+			<li><strong>Front end: </strong>It consistes of the html pages which user/client sees on its web browser (eg: chrome).</li>
+			<li><strong>Back end/Server side: </strong>It consists of the scripts written on scripting languages(we have used php here) on the server.</li>
+			<li><strong>Database: </strong>It consists of the database to store the files or paths to the files in a tabular.</li>
+			</ul>
+			</p>
+			
+			<h2 class="section-heading">Resources used in this project</h2>
+            <p>In this project, we have used the following resources:
+			<ul>
+			<li>Front end: The front end is developed using html/html5, css, javascript, ajax, jquery and bootstrap.</li>
+			<li>Back end: The backend is completely coded using php.</li>
+			<li>Database: MySql batabase is used for backend.</li>
+			</ul>
+			<i>Note: </i>To make this website working, we need a server. For this project, we will convert our laptops/desktops into servers and our harddisk will act like 
+			a database. For this purpose, we use an application software called <i>WAMP Server</i> or <i>XAMP Server</i> (we have used WAMP here). And a database software called <i>MySql</i>.<br>
+			</p>
+			
+			<p>After installing WAMP You will get the following links shown in the image to your database and localhost:</p>
+			
+			<img class="img-fluid" src="un/un8.jpg" alt="">
+            <span class="caption text-muted">WAMP Server links</span>
+			
+			<p>Once the server is set, you need to build your entire project inside the <i>www directory</i> of the WAMP Server. Since <i>localhost</i>'s default 
+			path is set in the <i>www directory</i>.</p>
+			
+			<h2 class="section-heading">Planning of the project</h2>
+			<p>Before going practical, we need to know what we are going to make. <br>So for this project, we decided to make a front page. Whenever a user will open 
+			the website, he'll visit that page. <br> On that page, there'll be three forms enteries,<i>Students login, members login</i> and <i>admin login</i>.<br>
+			Every form entry will take user to its respective page. At the backend, php scripts will connect the user with the MySql database. This is the overview of the 
+			project.</p>
+			
+			<h2 class="section-heading">Frontend Designing part</h2>
+            <p>Make a folder inside <i>www directory</i> and put all your front end files inside that folder. Here we will first make a home page. <br>
+			To make home page, we have used bootstrap and css and form fileds are linked to their process php pages. Using bootstrap will make the website compatible 
+			with mobile phones and small devices.
+			The home page in different formats is shown below:  </p>
+			
+			<img class="img-fluid" src="un/un1.jpg" alt="">
+            <span class="caption text-muted">Home page top</span>
+			<br>
+			<img class="img-fluid" src="un/un2.jpg" alt="">
+            <span class="caption text-muted">Home page bottom</span>
+			<br>
+			<img class="img-fluid" src="un/un3.jpg" alt="">
+            <span class="caption text-muted">Home page optimized</span>
+			<br>
+			<img class="img-fluid" src="un/un7.jpg" alt="">
+            <span class="caption text-muted">Home page optimized navigations</span>
+			
+            <p>After filling the authentication details in admin, members and students section, the action will go to the server where php files reside. 
+			Once the authentication is successful, the user will be taken to students, members or admin pages. These pages are also coded using bootstrap and css. 
+			<ul>
+			<li><i>Students</i> page will give access to students which are allowed only to search for the notes and download them. <br><br>
+			<img class="img-fluid" src="un/un4.jpg" alt="">
+            <span class="caption text-muted">Students page</span> </li>
+			<li><i>Members</i> page will give access to members of the website which are allowed to add the notes as well as search for the notes and download them. <br><br>
+			<img class="img-fluid" src="un/un5.jpg" alt="">
+            <span class="caption text-muted">Members page</span> </li>
+			<li><i>Admins</i> page will give access to admins which are allowed only to manage the webiste. <br><br>
+			<img class="img-fluid" src="un/un6.jpg" alt="">
+            <span class="caption text-muted">Admins page</span> </li>
+			</ul>
+			</p>
+			
+            <h2 class="section-heading">Backend scripting</h2>
+
+            <p>Now whenever a form field is filled in front end, its action is proceeded in the backend. Suppose we fill the login details of Students and press login button, 
+			the flow will go to the students_process.php at the server. Now it will use sql queries to connect with the database and will check if the entered 
+			user id and password is correct. If it is correct, it'll take user to students.php page. And if the details are incorrect, it'll redirect the user 
+			to index.html(home)  page. For sample, students_process.php is given <a href="un/students_process.php">here</a>.</p>
+			
+			
+			
+			<p>The code snippets and reference to this project is given in my 
+			<a href="https://github.com/SauravSinghKholiya/un">github repository </a>.<br>
+			<strong>Thank You for reading.</strong></p>
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+			  <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
