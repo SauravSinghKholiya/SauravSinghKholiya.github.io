@@ -121,8 +121,8 @@
             <h2 class="section-heading">Using algorithm to filter the masked images</h2>
 
             <p>As we see in the masked images, there are extra white dots present apart from river path. We need to remove them so that the image would  give 
-			only the river path. To do so, we used a <strong>sliding window</strong> concept. A window is basically a grid of piels. We can manage the size of grid 
-			in our code. Now we slide the grid horizontally throught the image. To remove the etra patches, we check the proportion of the intensity of white 
+			only the river path. To do so, we used a <strong>sliding window</strong> concept. A window is basically a grid of pixels. We can manage the size of grid 
+			in our code. Now we slide the grid horizontally throught the image. To remove the extra patches, we check the proportion of the intensity of white 
 			pixels. We also check whether the white pixels form a pattern or randomly scatteres. After removing the scattered white pixels, we filter the image.
 			Removing white pixels generally means making them black. <br>
 			<i>Note: We perform this algorithm in masked images.</i><br>
